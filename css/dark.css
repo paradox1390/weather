@@ -1,0 +1,31 @@
+:root {
+  --phone-gradient: linear-gradient(135deg, #383838, #232323, #1e1e1e);
+  --color: #fff;
+  --background-component: #444;
+  --placeholder-text-color: rgba(255, 255, 255, 0.6);
+  --caret-color: #fff;
+  --border-color: none;
+  --sunrise-img: url("../images/weather/sunrise_dark.svg");
+  --sunset-img: url("../images/weather/sunset_dark.svg");
+  --humidity--img: url("../images/weather/humidity_dark.svg");
+  --wind--img: url("../images/weather/wind_dark.svg");
+  --barometr--img: url("../images/weather/barometer_dark.svg");
+  --uv-index--img: url("../images/weather/uv-index_dark.svg");
+  --hour-day: #373636;
+  --hour-hight: #373636;
+  --color-scroll: rgb(255 255 255 / 0.5);
+  --current-temp-color: linear-gradient(90deg, #fff 0%, #7c7b7b 100%);
+  --seacrh-list-hover: rgba(255, 255, 255, 0.779);
+}
+
+.switcher-radio {
+  filter: invert(1);
+}
+
+.switcher-radio:checked {
+  filter: invert(0);
+}
+
+.switcher__status {
+  filter: invert(1);
+}
