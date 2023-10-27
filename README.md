@@ -2,7 +2,7 @@
 
 ---
 
-[Demo](https://www.example.com)
+[Demo](https://paradox1390.github.io/weather/)
 
 > - App displays the current weather.
 > - Shows the current time in the city.
