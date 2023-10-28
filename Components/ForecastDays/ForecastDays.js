@@ -5,6 +5,10 @@ export default class ForecastDays extends Components {
     super(element);
     this.forecastday = forecastday;
   }
+  containerComponents = this.createElement({
+    el: "section",
+    class: ["forecast__days-container", "container"],
+  });
   renderComponets = () => {
     const header = this.createElement({
       el: "h3",
@@ -23,8 +27,6 @@ export default class ForecastDays extends Components {
   };
 
   render = () => {
-    this.containerComponents.classList.add("forecast__days-container");
-    this.containerComponents.classList.add("container");
     this.renderComponets();
     this.parentContainer.append(this.containerComponents);
   };

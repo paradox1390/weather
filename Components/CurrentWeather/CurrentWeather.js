@@ -10,9 +10,12 @@ export default class CurrentWeather extends Components {
   constructor(element, storage) {
     super(element);
     this.storage = storage;
-
-    // this.render;
   }
+
+  containerComponents = this.createElement({
+    el: "section",
+    class: ["current__weather-container", "container"],
+  });
 
   renderComponents = () => {
     this.currentTemp = new CurrentTemp(this.containerComponents, this.storage);
@@ -40,8 +43,6 @@ export default class CurrentWeather extends Components {
 
   render = () => {
     this.renderComponents();
-    this.containerComponents.classList.add("current__weather-container");
-    this.containerComponents.classList.add("container");
     this.parentContainer.append(this.containerComponents);
   };
 }

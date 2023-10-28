@@ -11,9 +11,11 @@ export default class Info extends Components {
     this.currentTime = new CurrentTime(this.containerComponents, this.location);
     this.currentDate = new CurrentDate(this.containerComponents, this.location);
   }
+  containerComponents = this.createElement({
+    el: "section",
+    class: ["info__container", "container"],
+  });
   render = () => {
-    this.containerComponents.classList.add("info__container");
-    this.containerComponents.classList.add("container");
     this.cityName.render();
     this.currentTime.render();
     this.currentDate.render();

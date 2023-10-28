@@ -6,7 +6,10 @@ export default class Navigation extends Components {
     super(element);
     this.app = app;
   }
-
+  containerComponents = this.createElement({
+    el: "header",
+    class: ["control__container"],
+  });
   renderComponents = () => {
     const fieldSet = this.createElement({
       el: "fieldset",
@@ -19,7 +22,6 @@ export default class Navigation extends Components {
   };
 
   render = () => {
-    this.containerComponents.classList.add("control__container");
     this.renderComponents();
     this.parentContainer.append(this.containerComponents);
   };

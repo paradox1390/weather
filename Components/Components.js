@@ -4,20 +4,20 @@ export default class Components {
   }
   containerComponents = this.createElement({ el: "div" });
 
-  createElement(arr) {
+  createElement(obj) {
     const element =
-      arr.el === "fragment"
+      obj.el === "fragment"
         ? document.createDocumentFragment()
-        : document.createElement(arr.el);
+        : document.createElement(obj.el);
 
-    if (arr.atr?.length) {
-      arr.atr.forEach((atribut) => {
+    if (obj.atr?.length) {
+      obj.atr.forEach((atribut) => {
         const nameAtr = Object.keys(atribut)[0];
         element[nameAtr] = atribut[nameAtr];
       });
     }
-    if (arr.class?.length) {
-      arr.class.forEach((className) => {
+    if (obj.class?.length) {
+      obj.class.forEach((className) => {
         element.classList.add(className);
       });
     }

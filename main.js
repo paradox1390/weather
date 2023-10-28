@@ -3,5 +3,4 @@ import App from "./App.js";
 polyfillCountryFlagEmojis();
 
 const appEl = document.querySelector(".app");
-const navigationEl = document.querySelector(".control__container");
-const app = new App(appEl, navigationEl);
+const app = new App(appEl);

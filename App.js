@@ -28,6 +28,11 @@ export default class App extends Components {
     return true;
   };
 
+  containerComponents = this.createElement({
+    el: "main",
+    class: ["componets__container"],
+  });
+
   getdata = async (city) => {
     if (this.store.getSavedForecast(city) && !this.isAgigngData(city)) {
       this.storage = this.store.getSavedForecast(city);
@@ -45,7 +50,6 @@ export default class App extends Components {
   };
 
   renderError = () => {
-    this.containerComponents.classList.add("componets__container");
     this.containerComponents.innerHTML = "";
     const pError = this.createElement({
       el: "p",
@@ -94,7 +98,6 @@ export default class App extends Components {
   };
 
   render = () => {
-    this.containerComponents.classList.add("componets__container");
     this.containerComponents.innerHTML = "";
     this.renderComponents();
     this.parentContainer.append(this.containerComponents);

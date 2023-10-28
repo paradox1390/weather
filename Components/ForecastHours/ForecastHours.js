@@ -7,6 +7,11 @@ export default class ForecastHours extends Components {
     this.timeZone = location.tz_id;
   }
 
+  containerComponents = this.createElement({
+    el: "section",
+    class: ["forecast__hourly-container", "container"],
+  });
+
   filterHours = () => {
     const formatetLocalTIme = new Intl.DateTimeFormat("en-GB", {
       timeZone: this.timeZone,
@@ -44,8 +49,6 @@ export default class ForecastHours extends Components {
   };
 
   render = () => {
-    this.containerComponents.classList.add("forecast__hourly-container");
-    this.containerComponents.classList.add("container");
     this.renderComponents();
     this.parentContainer.append(this.containerComponents);
   };
